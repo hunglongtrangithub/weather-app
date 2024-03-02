@@ -36,7 +36,7 @@ npm install
 ```sh
 npm start
 ```
-2. Open your web browser and visit `http://localhost:3000`
+2. Open your web browser and visit [http://localhost:3000](http://localhost:3000)
 
 ## Built With
 
