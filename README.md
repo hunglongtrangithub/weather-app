@@ -42,4 +42,5 @@ npm start
 
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
+- [i18next](https://www.i18next.com/)
 - [7Timer! API](http://www.7timer.info/doc.php)
