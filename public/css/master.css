@@ -1,0 +1,143 @@
+body {
+    background-color: #d8bc95;
+    color: black;
+}
+
+.heading {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 4em;
+    font-family: "Noto Sans JP", sans-serif;
+    text-align: center;
+    margin: 2rem;
+    padding: 0.5em;
+    background-color: #2fb76d;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.weather-info {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    min-width: 150px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+}
+
+.weather-info:empty {
+    display: none;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 50px;
+    margin: 20px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#errorBox {
+    display: none;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    min-width: 150px;
+    background-color: #fb0000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+}
+
+#loadingStatus {
+    padding: 20px;
+    border: none;
+    text-align: left;
+    width: fit-content;
+    background-color: #ec5bff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+}
+
+select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M2048 0v2048L0 0h2048z" fill="%23000" fill-opacity="0.2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    font-family: "Noto Sans JP", sans-serif;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+select:hover {
+    border-color: #999;
+    background-color: #e6e6e6;
+}
+
+select:focus {
+    border-color: #666;
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
+}
+
+#languageSelect {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    font-size: 16px;
+}
+
+#dropDownButton {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+#switchUnitButton {
+    background-color: rgb(2, 149, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    font-family: "Noto Sans JP", sans-serif;
+    border: 1px solid #ccc;
+}
+
+#switchUnitButton:hover {
+    background-color: rgb(0, 119, 204);
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
