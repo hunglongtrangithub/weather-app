@@ -142,7 +142,6 @@ async function getTimeZone(cityObj) {
   try {
     clearError();
     displayLoadingStatus(i18next.t("loadingTimeZone"));
-    return "Asia/Tokyo";
     let response = await fetch(`${API_BASE_URL}/timezone`, {
       method: "POST",
       headers: {

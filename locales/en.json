@@ -1,6 +1,6 @@
 {
     "heading": "Europe Weather Forecast App",
-    "subHeading": "select a city",
+    "subHeading": "Powered by ",
     "loadingCities": "Loading cities...",
     "loadingTimeZone": "Loading timezone information...",
     "loadingWeather": "Loading weather information...",
