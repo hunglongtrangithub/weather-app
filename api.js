@@ -1,9 +1,7 @@
 import * as d3 from "d3";
 import fs from "fs";
 import fetch from "node-fetch";
-import dotenv from "dotenv";
 import geoTz from "geo-tz";
-dotenv.config();
 
 function loadCSV() {
   const filePath = "city_coordinates.csv";
