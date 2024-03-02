@@ -1,4 +1,5 @@
 const API_BASE_URL = "http://localhost:3000";
+
 const weekDayColorMap = [
   "#ff0000", // red
   "#ffffff", // white
