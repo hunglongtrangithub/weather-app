@@ -2,6 +2,7 @@ import * as d3 from "d3";
 import fs from "fs";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
+import geoTz from "geo-tz";
 dotenv.config();
 
 function loadCSV() {
@@ -40,26 +41,13 @@ async function loadWeatherData(cityObj) {
   }
 }
 
-async function getTimeZone(cityObj) {
+async function getTimeZone(latitude, longitude) {
   try {
-    const response = await fetch(
-      `http://api.geonames.org/timezoneJSON?lat=${cityObj.latitude}&lng=${cityObj.longitude}&username=${process.env.GEONAMES_USERNAME}`
-    );
-
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const data = await response.json();
-    if (data.timezoneId) {
-      console.log(data.timezoneId);
-      return data.timezoneId;
-    } else {
-      throw new Error("TimezoneID not found in the response");
-    }
+    const timeZone = geoTz.find(latitude, longitude);
+    return timeZone[0];
   } catch (error) {
-    // Handle the error when fetching timezone data
-    console.error("Error fetching timezone information:", error);
+    // Handle the timezone error
+    console.error("Error fetching timezone:", error);
     throw error; // Optionally re-throw the error if you want calling code to handle it as well
   }
 }

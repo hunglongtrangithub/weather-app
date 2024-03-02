@@ -52,8 +52,7 @@ app.post("/timezone", async (req, res) => {
         error: "Invalid city object. Latitude and longitude are required.",
       });
     }
-
-    const timeZone = await api.getTimeZone(cityObj);
+    const timeZone = await api.getTimeZone(cityObj.latitude, cityObj.longitude);
     res.send({ timeZone });
   } catch (error) {
     console.error("Error fetching timezone information:", error);
