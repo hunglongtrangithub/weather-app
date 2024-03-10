@@ -85,7 +85,7 @@ function formattedDate(dateStr, timeZone) {
   };
   const date = new Date(Date.UTC(year, month - 1, day)).toLocaleString(
     toBCP47(i18next.language),
-    options
+    options,
   );
   let datePart, weekDayPart;
 
@@ -209,7 +209,7 @@ function populateWeatherData(weatherData, timeZone, language) {
     let { datePart, weekDayPart, weekDayNumber } = formattedDate(
       String(weatherInfo.date),
       timeZone,
-      toBCP47(language)
+      toBCP47(language),
     );
 
     let dayElement = document.getElementById(`day${i}`);
@@ -217,6 +217,7 @@ function populateWeatherData(weatherData, timeZone, language) {
 
     let date = document.createElement("p");
     date.innerHTML = datePart;
+    date.style.margin = "20px";
 
     let weekDay = document.createElement("p");
     weekDay.innerHTML = weekDayPart;
@@ -234,7 +235,7 @@ function populateWeatherData(weatherData, timeZone, language) {
     tempMax.setAttribute("class", `temp`);
     const tempMaxVal = convertTempToUnit(
       `${weatherInfo.temp2m.max}°C`,
-      currentTempUnit
+      currentTempUnit,
     );
     tempMax.innerHTML = tempMaxVal;
     tempMax.style.color = "red";
@@ -243,7 +244,7 @@ function populateWeatherData(weatherData, timeZone, language) {
     tempMin.setAttribute("class", `temp`);
     const tempMinVal = convertTempToUnit(
       `${weatherInfo.temp2m.min}°C`,
-      currentTempUnit
+      currentTempUnit,
     );
     tempMin.innerHTML = tempMinVal;
     tempMin.style.color = "blue";

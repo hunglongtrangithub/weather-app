@@ -25,11 +25,13 @@ body {
     border: 1px solid #ccc;
     text-align: center;
     min-width: 150px;
+    max-width: 1fr;
     background-color: #f7f7f7;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     font-family: "Noto Sans JP", sans-serif;
     font-size: 20px;
+    height: 100%;
 }
 
 .weather-info:empty {
@@ -39,6 +41,7 @@ body {
 .weather-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 50px;
     margin: 20px;
     justify-content: center;
@@ -144,4 +147,5 @@ select:focus {
     display: flex;
     justify-content: center;
     margin: 20px;
+    padding: 20px;
 }
